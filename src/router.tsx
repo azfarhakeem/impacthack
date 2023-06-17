@@ -22,6 +22,33 @@ const Overview = Loader(lazy(() => import('src/content/overview')));
 
 const Crypto = Loader(lazy(() => import('src/content/dashboards/Crypto')));
 
+//PropertyAgent
+
+const PropertyAgent = Loader(lazy(() => import('src/content/propertyAgent/PropertyAgent')));
+
+const Listing = Loader(lazy(() => import('src/content/propertyAgent/listing')));
+
+const Detail = Loader(lazy(() => import('src/content/propertyAgent/Detail')));
+
+
+//Banker
+
+const Banker = Loader(lazy(() => import('src/content/banker/banker')));
+
+//Solicitor
+
+const Solicitor = Loader(lazy(() => import('src/content/solicitor/Solicitor')));
+
+//Valuer
+
+const Valuer = Loader(lazy(() => import('src/content/valuer/Valuer')));
+
+//Buyer
+
+const Buyer = Loader(lazy(() => import('src/content/buyerseller/buyerseller')));
+
+
+
 // Applications
 
 const Messenger = Loader(
@@ -131,6 +158,51 @@ const routes: RouteObject[] = [
       {
         path: 'crypto',
         element: <Crypto />
+      },
+      // {
+      //   path: 'propertyAgent',
+      //   element: <PropertyAgent />
+      // },
+      {
+        path: 'propertyAgent',
+        children: [
+          {
+            path: '',
+            element: <PropertyAgent />
+          },
+          {
+            path: 'listing',
+            element: <Listing />
+          },
+          {
+            path: 'detail',
+            element: <Detail />
+          },
+          // {
+          //   path: 'maintenance',
+          //   element: <StatusMaintenance />
+          // },
+          // {
+          //   path: 'coming-soon',
+          //   element: <StatusComingSoon />
+          // }
+        ]
+      },
+      {
+        path: 'banker',
+        element: <Banker />
+      },
+      {
+        path: 'solicitor',
+        element: <Solicitor />
+      },
+      {
+        path: 'valuer',
+        element: <Valuer />
+      },
+      {
+        path: 'buyer',
+        element: <Buyer />
       },
       {
         path: 'messenger',

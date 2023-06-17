@@ -1,19 +1,17 @@
 import { Helmet } from 'react-helmet-async';
-import PageHeader from './PageHeader';
 import PageTitleWrapper from 'src/components/PageTitleWrapper';
 import { Container, Grid } from '@mui/material';
 import Footer from 'src/components/Footer';
+import PageHeader from '../dashboards/Crypto/PageHeader';
+import Analytics from '../dashboards/Crypto/Analytics';
+import { AccountBalance } from '@mui/icons-material';
+import AccountSecurity from '../dashboards/Crypto/AccountSecurity';
+import Statistics from '../dashboards/Crypto/Statistics';
+import Wallets from '../dashboards/Crypto/Wallets';
+import WatchList from '../dashboards/Crypto/WatchList';
+import Performance from '../dashboards/Crypto/Performance';
 
-import AccountBalance from './AccountBalance';
-import Performance from './Performance';
-import Wallets from './Wallets';
-import AccountSecurity from './AccountSecurity';
-import WatchList from './WatchList';
-import Statistics from './Statistics';
-import Analytics from './Analytics';
-import PropertyDistribution from './PropertyDistribution';
-
-function DashboardCrypto() {
+function Valuer() {
   return (
     <>
       <Helmet>
@@ -61,4 +59,4 @@ function DashboardCrypto() {
   );
 }
 
-export default DashboardCrypto;
+export default Valuer;

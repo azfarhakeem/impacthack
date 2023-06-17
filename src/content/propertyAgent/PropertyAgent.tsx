@@ -1,19 +1,15 @@
 import { Helmet } from 'react-helmet-async';
-import PageHeader from './PageHeader';
 import PageTitleWrapper from 'src/components/PageTitleWrapper';
 import { Container, Grid } from '@mui/material';
 import Footer from 'src/components/Footer';
+import PageHeader from '../propertyAgent/PageHeader';
+import Analytics from '../propertyAgent/Analytics';
+import Statistics from '../propertyAgent/Statistics';
+import Performance from '../propertyAgent/Performance';
+import AccountSecurity from '../dashboards/Crypto/AccountSecurity';
+import SideInfo from './SideInfo';
 
-import AccountBalance from './AccountBalance';
-import Performance from './Performance';
-import Wallets from './Wallets';
-import AccountSecurity from './AccountSecurity';
-import WatchList from './WatchList';
-import Statistics from './Statistics';
-import Analytics from './Analytics';
-import PropertyDistribution from './PropertyDistribution';
-
-function DashboardCrypto() {
+function PropertyAgent() {
   return (
     <>
       <Helmet>
@@ -33,27 +29,17 @@ function DashboardCrypto() {
           <Grid item xs={12}>
             <Performance />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item lg={8} xs={12}>
             <Analytics />
           </Grid>
-          {/* <Grid item lg={4} xs={12}>
-            <PropertyDistribution />
-          </Grid> */}
+          <Grid item lg={4} xs={12}>
+            <SideInfo />
+          </Grid>
           <Grid item xs={12}>
             <Statistics />
           </Grid>
-          <Grid item lg={8} xs={12}>
-            <Wallets />
-          </Grid>
-          <Grid item lg={4} xs={12}>
-            <AccountSecurity />
-          </Grid>
-          <Grid item xs={12}>
-            <WatchList />
-          </Grid>
-          <Grid item xs={12}>
-            <AccountBalance />
-          </Grid>
+          
+          
         </Grid>
       </Container>
       <Footer />
@@ -61,4 +47,4 @@ function DashboardCrypto() {
   );
 }
 
-export default DashboardCrypto;
+export default PropertyAgent;

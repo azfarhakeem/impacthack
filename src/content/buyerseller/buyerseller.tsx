@@ -1,19 +1,17 @@
 import { Helmet } from 'react-helmet-async';
-import PageHeader from './PageHeader';
 import PageTitleWrapper from 'src/components/PageTitleWrapper';
 import { Container, Grid } from '@mui/material';
 import Footer from 'src/components/Footer';
+import PageHeader from '../buyerseller/PageHeader';
+import Analytics from '../buyerseller/Analytics';
+import { AccountBalance } from '@mui/icons-material';
+import AccountSecurity from '../buyerseller/AccountSecurity';
+import Statistics from '../buyerseller/Statistics';
+import Wallets from '../buyerseller/Wallets';
+import Performance from '../buyerseller/Performance';
+import SideInfo from './SideInfo';
 
-import AccountBalance from './AccountBalance';
-import Performance from './Performance';
-import Wallets from './Wallets';
-import AccountSecurity from './AccountSecurity';
-import WatchList from './WatchList';
-import Statistics from './Statistics';
-import Analytics from './Analytics';
-import PropertyDistribution from './PropertyDistribution';
-
-function DashboardCrypto() {
+function buyerSeller() {
   return (
     <>
       <Helmet>
@@ -33,13 +31,13 @@ function DashboardCrypto() {
           <Grid item xs={12}>
             <Performance />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item lg={8} xs={12}>
             <Analytics />
           </Grid>
-          {/* <Grid item lg={4} xs={12}>
-            <PropertyDistribution />
-          </Grid> */}
-          <Grid item xs={12}>
+          <Grid item lg={4} xs={12}>
+            <SideInfo />
+          </Grid>
+          {/* <Grid item xs={12}>
             <Statistics />
           </Grid>
           <Grid item lg={8} xs={12}>
@@ -48,12 +46,10 @@ function DashboardCrypto() {
           <Grid item lg={4} xs={12}>
             <AccountSecurity />
           </Grid>
-          <Grid item xs={12}>
-            <WatchList />
-          </Grid>
+          
           <Grid item xs={12}>
             <AccountBalance />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
       <Footer />
@@ -61,4 +57,4 @@ function DashboardCrypto() {
   );
 }
 
-export default DashboardCrypto;
+export default buyerSeller;

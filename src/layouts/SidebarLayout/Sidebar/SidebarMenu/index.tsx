@@ -184,7 +184,7 @@ function SidebarMenu() {
           <SubMenuWrapper>
             <List component="div">
               <ListItem component="div">
-                <Button
+                {/* <Button
                   disableRipple
                   component={RouterLink}
                   onClick={closeSidebar}
@@ -192,7 +192,7 @@ function SidebarMenu() {
                   startIcon={<DesignServicesTwoToneIcon />}
                 >
                   Overview
-                </Button>
+                </Button> */}
               </ListItem>
             </List>
           </SubMenuWrapper>
@@ -201,13 +201,24 @@ function SidebarMenu() {
           component="div"
           subheader={
             <ListSubheader component="div" disableSticky>
-              Dashboards
+              Property Agent
             </ListSubheader>
           }
         >
           <SubMenuWrapper>
             <List component="div">
-              <ListItem component="div">
+            <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/dashboards/propertyAgent"
+                  startIcon={<MmsTwoToneIcon />}
+                >
+                  Dashboard
+                </Button>
+              </ListItem>
+              {/* <ListItem component="div">
                 <Button
                   disableRipple
                   component={RouterLink}
@@ -215,28 +226,135 @@ function SidebarMenu() {
                   to="/dashboards/crypto"
                   startIcon={<BrightnessLowTwoToneIcon />}
                 >
-                  Cryptocurrency
+                  Overview
                 </Button>
-              </ListItem>
-              <ListItem component="div">
+              </ListItem> */}
+             <ListItem component="div">
                 <Button
                   disableRipple
                   component={RouterLink}
                   onClick={closeSidebar}
-                  to="/dashboards/messenger"
-                  startIcon={<MmsTwoToneIcon />}
+                  to="/dashboards/propertyAgent/listing"
+                  startIcon={<TableChartTwoToneIcon />}
                 >
-                  Messenger
+                  Listing
                 </Button>
               </ListItem>
+              
+              
+              
             </List>
           </SubMenuWrapper>
         </List>
+
         <List
           component="div"
           subheader={
             <ListSubheader component="div" disableSticky>
-              Management
+              Buyer/Seller
+            </ListSubheader>
+          }
+        >
+          <SubMenuWrapper>
+            <List component="div">
+          <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/dashboards/buyer"
+                  startIcon={<MmsTwoToneIcon />}
+                >
+                  Dashboard
+                </Button>
+              </ListItem>
+
+
+        </List>
+        </SubMenuWrapper></List>
+
+        <List
+          component="div"
+          subheader={
+            <ListSubheader component="div" disableSticky>
+              Banker
+            </ListSubheader>
+          }
+        >
+          <SubMenuWrapper>
+            <List component="div">
+          <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/dashboards/banker"
+                  startIcon={<MmsTwoToneIcon />}
+                >
+                  Dashboard
+                </Button>
+              </ListItem>
+
+
+        </List>
+        </SubMenuWrapper></List>
+        <List
+          component="div"
+          subheader={
+            <ListSubheader component="div" disableSticky>
+              Solicitor
+            </ListSubheader>
+          }
+        >
+          <SubMenuWrapper>
+            <List component="div">
+          <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/dashboards/solicitor"
+                  startIcon={<MmsTwoToneIcon />}
+                >
+                   Dashboard
+                </Button>
+              </ListItem>
+
+
+        </List>
+        </SubMenuWrapper></List>
+
+        <List
+          component="div"
+          subheader={
+            <ListSubheader component="div" disableSticky>
+              Valuer
+            </ListSubheader>
+          }
+        >
+          <SubMenuWrapper>
+            <List component="div">
+          <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/dashboards/valuer"
+                  startIcon={<MmsTwoToneIcon />}
+                >
+                  Dashboard
+                </Button>
+              </ListItem>
+
+
+        </List></SubMenuWrapper></List>
+
+        
+        {/* <List
+          component="div"
+          subheader={
+            <ListSubheader component="div" disableSticky>
+              Filters
             </ListSubheader>
           }
         >
@@ -255,8 +373,8 @@ function SidebarMenu() {
               </ListItem>
             </List>
           </SubMenuWrapper>
-        </List>
-        <List
+        </List> */}
+        {/* <List
           component="div"
           subheader={
             <ListSubheader component="div" disableSticky>
@@ -290,8 +408,8 @@ function SidebarMenu() {
               </ListItem>
             </List>
           </SubMenuWrapper>
-        </List>
-        <List
+        </List> */}
+        {/* <List
           component="div"
           subheader={
             <ListSubheader component="div" disableSticky>
@@ -402,8 +520,8 @@ function SidebarMenu() {
               </ListItem>
             </List>
           </SubMenuWrapper>
-        </List>
-        <List
+        </List> */}
+        {/* <List
           component="div"
           subheader={
             <ListSubheader component="div" disableSticky>
@@ -459,7 +577,7 @@ function SidebarMenu() {
               </ListItem>
             </List>
           </SubMenuWrapper>
-        </List>
+        </List> */}
       </MenuWrapper>
     </>
   );
