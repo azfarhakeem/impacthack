@@ -30,7 +30,7 @@ import { CryptoOrder, CryptoOrderStatus } from 'src/models/crypto_order';
 import EditTwoToneIcon from '@mui/icons-material/EditTwoTone';
 import DeleteTwoToneIcon from '@mui/icons-material/DeleteTwoTone';
 import BulkActions from '../applications/Transactions/BulkActions';
-
+import { useNavigate } from 'react-router';
 
 interface RecentOrdersTableProps {
   className?: string;
@@ -77,9 +77,6 @@ const applyFilters = (
   });
 };
 
-
-
-
 const applyPagination = (
   cryptoOrders: CryptoOrder[],
   page: number,
@@ -98,6 +95,8 @@ const RecentOrdersTable: FC<RecentOrdersTableProps> = ({ cryptoOrders }) => {
   const [filters, setFilters] = useState<Filters>({
     status: null
   });
+
+  const navigate = useNavigate();
 
   const statusOptions = [
     {
@@ -322,7 +321,9 @@ const RecentOrdersTable: FC<RecentOrdersTableProps> = ({ cryptoOrders }) => {
                         }}
                         color="inherit"
                         size="small"
-                        // onClick={handleClick}
+                        onClick={() => {
+                          navigate('/dashboards/propertyAgent/detail');
+                        }}
                       >
                         <EditTwoToneIcon fontSize="small" />
                       </IconButton>
