@@ -8,6 +8,7 @@ import Statistics from './Statistics';
 import Performance from './Performance';
 import AccountSecurity from '../dashboards/Crypto/AccountSecurity';
 import SideInfo from './SideInfo';
+import ProgressBar from './ProgressBar';
 
 function Detail() {
   return (
@@ -33,7 +34,7 @@ function Detail() {
             <Analytics />
           </Grid> */}
           <Grid item xs={12}>
-            <SideInfo />
+            <ProgressBar />
           </Grid>
           {/* <Grid item xs={12}>
             <Statistics />
